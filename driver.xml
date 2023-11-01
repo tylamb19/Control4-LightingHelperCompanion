@@ -1,0 +1,70 @@
+<devicedata>
+  <copyright>Copyright 2023 Lamb Networks.</copyright>
+  <manufacturer>Tyler Lamb</manufacturer>
+  <version>1</version>
+  <creator>Tyler Lamb</creator>
+  <created>10/26/2023 9:10:00 PM</created>
+  <modified>10/26/2023 9:38:00 PM</modified>
+  <model>Lighting Helper Wired Companion</model>
+  <name>Lighting Helper Wired Companion</name>
+  <small>devices_sm/panel_light.png</small>
+  <large>devices_lg/panel_light.png</large>
+  <proxies>
+    <proxy name="Lighting Helper Companion">lighting_helper_companion</proxy>
+  </proxies>
+  <driver>DriverWorks</driver>
+  <control>lua_gen</control>
+  <combo>true</combo>
+  <controlmethod>other</controlmethod>
+  <composer_categories>
+    <category>Lighting</category>
+  </composer_categories>
+  <config>
+    <script jit="1" file="driver.lua"></script>
+    <properties>
+      <property>
+        <name>Driver Version</name>
+        <default>101</default>
+        <type>STRING</type>
+        <readonly>true</readonly>
+      </property>
+    </properties>
+    <actions />
+    <commands />
+    <documentation file="documentation.rtf" />
+  </config>
+  <events />
+  <connections>
+   <connection>
+      <id>1</id>
+      <facing>6</facing>
+      <connectionname>Keypad Ambient Level Input</connectionname>
+      <type>1</type>
+      <consumer>True</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>AMBIENT_LEVEL</classname>
+        </class>
+      </classes>
+    </connection>
+    <connection>
+      <id>2</id>
+      <facing>6</facing>
+      <connectionname>Keypad Ambient Level Output</connectionname>
+      <type>1</type>
+      <consumer>False</consumer>
+      <audiosource>False</audiosource>
+      <videosource>False</videosource>
+      <linelevel>False</linelevel>
+      <classes>
+        <class>
+          <classname>AMBIENT_LEVEL_COMPANION</classname>
+        </class>
+      </classes>
+    </connection>
+  </connections>
+  <capabilities />
+</devicedata>
